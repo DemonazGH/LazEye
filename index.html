@@ -1,3 +1,8 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Анаглиф-Тетрис</title>
 <style>
 /* Layout: one dark screen — board in the centre, HUD to the side, settings drawer. Black ground is required for red/blue filters. */
@@ -13,6 +18,7 @@
   --body:"Golos Text", "Segoe UI", system-ui, sans-serif;
   --mono:"JetBrains Mono", ui-monospace, Consolas, monospace;
 }
+[hidden]{display:none!important}
 html,body{height:100%}
 body{background:var(--bg);color:var(--text);font-family:var(--body);font-size:15px;margin:0}
 .wrap{min-height:100%;box-sizing:border-box;padding-block:16px;padding-inline:16px;display:flex;flex-direction:column;align-items:center;gap:14px}
@@ -50,7 +56,8 @@ canvas{display:block;max-width:100%}
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
 </style>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;600&family=JetBrains+Mono:wght@400;600&family=Unbounded:wght@600;700&display=swap">
-
+</head>
+<body>
 <div class="wrap">
   <h1>Анаглиф-Тетрис</h1>
 
@@ -342,3 +349,5 @@ canvas{display:block;max-width:100%}
   document.addEventListener("visibilitychange", () => { if(document.hidden) setPause(true); });
 })();
 </script>
+</body>
+</html>
